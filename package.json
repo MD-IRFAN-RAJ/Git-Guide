@@ -1,0 +1,20 @@
+{
+  "name": "git-guide",
+  "private": true,
+  "scripts": {
+    "lint": "npm run lint --workspaces",
+    "format": "prettier --write .",
+    "prepare": "husky install"
+  },
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "devDependencies": {
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "husky": "^9.1.7",
+    "prettier": "^3.8.1"
+  }
+}
