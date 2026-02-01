@@ -5,9 +5,9 @@ export const searchIssues = async (query) => {
     `https://api.github.com/search/issues?q=${query}`,
     {
       headers: {
-        Authorization: `token ${process.env.GITHUB_TOKEN}`
-      }
-    }
+        Authorization: `token ${process.env.GITHUB_TOKEN}`,
+      },
+    },
   );
   return res.data.items;
 };

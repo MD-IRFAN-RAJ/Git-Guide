@@ -4,13 +4,14 @@
   "scripts": {
     "lint": "npm run lint --workspaces",
     "format": "prettier --write .",
-    "prepare": "husky install"
+    "prepare": "node -e \"process.env.CI || require('child_process').execSync('husky install', {stdio: 'inherit'})\""
   },
   "workspaces": [
     "client",
     "server"
   ],
   "devDependencies": {
+    "@eslint/js": "^9.39.2",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.5",
